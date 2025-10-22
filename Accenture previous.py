@@ -104,6 +104,32 @@ for i in range(len(arr)):
 
 print(arr)
 
+#rev a number and palindrome
+
+n = int(input("Enter a number: "))
+temp = n     # store original number
+rev = 0      # reversed number
+
+while n > 0:
+    digit = n % 10          # get last digit
+    rev = rev * 10 + digit  # add it to reverse
+    n = n // 10             # remove last digit
+
+if temp == rev:
+    print("Palindrome")
+else:
+    print("Not Palindrome")
+#  greatest of three numbers
+n1=int(input())
+n2=int(input())        
+n3=int(input())
+if n1 >= n2 and n1 >= n3:
+    print("num 1 is larger")
+elif n2 >=n1 and n2 >=n3:
+    print(("num 2 is larger"))
+else:
+    print("num 3 is larger")
+
 
 
 
