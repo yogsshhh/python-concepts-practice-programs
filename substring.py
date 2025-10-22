@@ -57,3 +57,19 @@ for i in range(len(n)-1):
 con.append(c)
 print(max(con))
 
+# 🧩 9️⃣ All Possible Substrings (Brute Force)
+
+# Model: Generate every substring.
+
+# Q: Print all possible substrings.
+# Input: "xy"
+# Output:
+
+# x
+# xy
+# y
+n = "san"
+
+for i in range(len(n)):         
+    for j in range(i, len(n)):  
+        print(n[i:j+1]) 
