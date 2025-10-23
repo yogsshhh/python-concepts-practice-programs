@@ -196,13 +196,49 @@ for i in range(len(n)):
 print(c)
 
 
+# consecutive diffrence
 
 
+arr=[5,3,8,6]
+res=[]
+for i in range(len(arr)-1):
+    res.append(arr[i+1]-arr[i])
+print(res)
+
+# dinner dishes
+arr=[100,50,30,44]
+res=0
+if len(arr) < 2:
+    print(0)
+else:
+    arr.sort(reverse=True)
+    res=sum(arr[:2])
+    print(res)
+
+# vaccant rooms 
+
+booked=list(map(int,input().split()))
+n=int(input())    
+t=int(input())
+print(t-n)
+
+# print 1st and last in words
 
 
+n="ham burger"  
+first=n[0]
+last=n[len(n)-1]
+res=first[0]+last[-1]
+print(res)
 
+# first letter of all the words
 
-
+n=input().split()
+res=[]
+for i in n:
+    res.append(i[0])
+res.sort()
+print("".join(res))
 
 
 
