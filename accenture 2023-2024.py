@@ -129,13 +129,71 @@ if prime(n) == True and rev(n) ==True:
 else:
     print("False")
 
+# String Decode
+# Input: a2b3
+# Output: aabbb
+# Explanation: Expand encoded string.
+
+n="a2b3"
+res=""
+for i in range(0,len(n)-1,2):
+    res+=n[i] *int(n[i+1])
+print(res)
+
+# Nth Fibonacci Number
+# Input: n = 6
+# Output: 8
+# Explanation: Fibonacci(6) = 8.
 
 
+n = 6
+a, b = 0, 1
+for i in range(2, n + 1):
+    a, b = b, a + b
+print(b) 
+
+# Decimal to Binary
+# Input: 10
+# Output: 1010
 
 
+n = 10
+binary = ""
+
+while n > 0:
+    binary = str(n % 2) + binary  
+    n//=2
+print(binary)
+-------------------------------------
+n = int(input("Enter a number: "))
+print(bin(n)[2:])   # remove '0b' prefix
 
 
+# Interchange Characters
+# Input: abcd
+# Output: badc
+# Explanation: Swap adjacent characters.
 
+
+n=list("abcd")
+for i in range(0,len(n),2):
+    n[i],n[i+1]=n[i+1],n[i]
+print("".join(n))
+
+# Count All Palindromic Subsequences
+# Input: 'aaa'
+# Output: 6
+# Explanation: All subsequences that are palindrome.
+
+
+n="aaa"
+c=0
+for i in range(len(n)):
+    for j in range(i,len(n)):
+        sub=n[i:j+1]
+        if sub == sub[::-1]:
+            c+=1
+print(c)
 
 
 
