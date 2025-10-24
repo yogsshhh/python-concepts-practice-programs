@@ -130,6 +130,131 @@ elif n2 >=n1 and n2 >=n3:
 else:
     print("num 3 is larger")
 
+# You are given two strings, s and t . Your task is to determine if it's
+# possible to rearrange the characters of s to form the string t .
+# Write a function that returns True it's possible to create t by
+# rearranging the characters of s and False otherwise.
+# Input
+# Two strings, s and t where the length of s and t are between 1 and
+# 1000 characters.
+# Output
+# Return True if it's possible to create t by rearranging the characters of
+# s and False otherwise
+# Example:
+# s="listen"
+# t="silent"
+# Output:
+# True/
+
+s="listen"
+t="silent"
+d1={}
+d2={}
+for i in s:
+    d1[i]=d1.get(i,0)+1
+for i in t:
+    d2[i]=d2.get(i,0)+1
+if d1==d2:
+    print(True)
+    
+else:
+    print(False)
+
+# A single line of text containing words separated by spaces. The input
+# string consists of only printable ASCII characters.
+# Output:
+# The string with words reversed in order.
+# Example:
+# Input:
+# Hello World
+# Output:
+# World Hello
+
+n="Hell NO"
+n=n.split()
+r=len(n)-1
+res=[]
+while r >=0 :
+    res.append(n[r])
+    r-=1
+print(" ".join(res))
+-----------------------------------------------
+
+print(" ".join(n.split()[::-1]))
+
+
+# You are given an integer 'n'
+# . Write a Python function to calculate and
+# return the sum of the digits in 'n' after converting it to its binary
+# representation.
+# For example, 15, which has a binary representation of 1111, should
+# return 4.
+
+
+n=15
+r=bin(n)
+arr=r[2:]
+sums=0
+for i in arr:
+    sums+=int(i)
+print(sums)
+--------------------------------------
+print(sum(int(i) for i in bin(n)[2:]))
+
+
+# Write the Python function sumevenandodd(arr) to solve this problem.
+# The function should take an array of integers as input and return a
+# tuple of two integers the first element being the sum of even numbers,
+# and the second element being the sum of odd numbers
+
+arr=[1,2,3,4,5,6,7]
+e=0
+o=0
+for i in arr:
+    if i&1:
+        o+=i
+    else:
+        e+=i
+print((e,o))
+
+# You have been given an integer N as input . your task is to write a
+# program to print N rows of Floyad’s Triangle. Floyd's pattern is a rightangled triangular array of natural numbers , used for the numbering of
+# lines in a printout
+# .
+# For N=4,
+# 1
+# 23
+# 456
+# 78910
+
+n=int(input())
+for i in range(n):
+    for j in range(i):
+        print(i,end="")
+        i+=1
+    print()
+
+# Rohan is a kid who has just learned about creating words from
+# alphabets. He has written some words in the notepad of his Father
+# laptop. Now his father wants to find the longest word written by Rohan
+# using a computer program. Write a program to find the longest string
+# in a given list of strings.
+# Example:
+# Input: yes no number
+# Output: The longest string is: number
+
+
+n=input().split()
+max=0
+r=""
+for i in range(len(n)):
+    temp=len(n[i])
+    if temp>max:
+        r=n[i]
+        max=temp
+print(r)    
+
+
 
 
 
