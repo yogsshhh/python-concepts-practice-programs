@@ -255,7 +255,19 @@ for i in range(len(n)):
 print(r)    
 
 
+number betweeen alphabets
 
+a="a123bc34d5s7er"
+c=0
+temp=''
+for i in a:
+    if i.isdigit():
+        temp+=i
+    else:
+        if temp!='':
+            c+=1
+            temp=""
+print(c)
 
 
 
