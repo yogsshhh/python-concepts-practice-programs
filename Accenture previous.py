@@ -270,7 +270,18 @@ for i in a:
 print(c)
 
 
-
+a="asdfessjj"
+d={}
+ev=0
+od=0
+for i in a:
+    d[i]=d.get(i,0)+1
+for i,j in d.items():
+    if j %2 ==0:
+        ev+=1
+    else:
+        od+=1
+print(abs(ev-od))
 
 
 
