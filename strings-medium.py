@@ -100,11 +100,86 @@ res += s1[min(len(s1), len(s2)):]
 res += s2[min(len(s1), len(s2)):]
 print(res)
 
+# keyboar keys problem
+s="ajiiikalamaass"
+res=""
+for i in range(1,len(s)):
+    if s[i]!=s[i-1]:
+        res+=s[i-1]
+res+=s[-1]
+print(res)
 
 
+# 1. Replace Characters in a String
+# Input:
+# Str: apples
+# ch1: a
+# ch2: p
+
+# Output: paales
+s="apples"
+ch1='a'
+ch2='p'
+temp="#"
+s=s.replace(ch1,temp)
+s=s.replace(ch2,ch1)
+s=s.replace(temp,ch2)
+print(s)
 
 
+# 2. Shorten Word with Middle Character Count
+# Input:
+# examination
 
+# Output:
+# e9n
+
+s = input("Enter a word: ")
+if len(s) <= 2:
+    print(s)
+else:
+    print(s[0] + str(len(s) - 2) + s[-1])
+
+
+# 1️⃣ Swap Case of Vowels Only
+
+# Input:
+# s = "Accenture"
+# Output:
+# aCCEntUrE
+# Hint: If it’s a vowel → swap its case; else keep as is
+
+
+s="accenture"
+vow="aeiouAEIOU"
+res=""
+for i in range(len(s)):
+    if s[i] in vow:
+        if s[i].isupper():
+            res+=s[i].lower()
+        else:
+            res+=s[i].upper()
+    else:
+        res+=s[i]
+print(res)
+
+
+# 2️⃣ Reverse Every Word Except the First and Last
+
+# Input:
+# s = "Python is very interesting"
+# Output:
+# Python si yrev interesting
+# Hint: Split, loop, reverse only middle words.
+
+s="python is very intresting"
+s=s.split()
+f=s[0]
+l=s[-1]
+res=[]
+for i in range(1,len(s)-1):
+    res.append(s[i][::-1])
+print(f," ".join(res),l)
 
 
 
