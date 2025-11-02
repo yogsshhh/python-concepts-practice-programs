@@ -284,9 +284,21 @@ for i,j in d.items():
 print(abs(ev-od))
 
 
+# magical numbers
 
+n = 20
+c = 0
 
+for i in range(1, n + 1):
+    bi = bin(i)[2:]
+    bi = bi.replace("0", "#").replace("1", "2").replace("#", "1")
+    ch = 0
+    for t in bi:
+        ch += int(t)
+    if ch % 2 != 0:
+        c += 1
 
+print(c)
 
 
 
