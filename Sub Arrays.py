@@ -50,3 +50,65 @@ for i in comb:
 print(*comb)
 print(*sums)
 
+
+# Given an array arr[] of integers and another integer target. Determine if there exist two distinct indices 
+# such that the sum of their elements is equal to the target
+
+#     .
+
+# Examples:
+
+# Input: arr[] = [0, -1, 2, -3, 1], target = -2
+# Output: true
+# Explanation: arr[3] + arr[4] = -3 + 1 = -2
+# Input: arr[] = [1, -2, 1, 0, 5], target = 0
+# Output: false
+# Explanation: None of the pair makes a sum of 0
+
+s=set()
+	    for i in arr:
+	        if target-i in s:
+	            return True
+	        s.add(i)
+	    return False
+	---------------------------------
+
+arr.sort()
+	    l,r=0,len(arr)-1
+	    while l <r:
+	        s=arr[l]+arr[r]
+	        if s==target:
+	            return True
+	        elif s < target:
+	            l+=1
+	        else:
+	            r-=1
+	    return False
+	        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
