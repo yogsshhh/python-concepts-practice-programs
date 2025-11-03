@@ -181,14 +181,60 @@ for i in range(1,len(s)-1):
     res.append(s[i][::-1])
 print(f," ".join(res),l)
 
+# move all zero to right
+arr="120450650320"
+c=0
+res=""
+for i in arr:
+    if i =="0":
+        c+=1
+    else:
+        res+=i
+r="0"*c
+print(res+r)
+        
+# 2.
+# I/p:
+# Sa-n-dh-i-ya
+# O/p:
+# ----Sandhiya
+
+s="sa-n-dh-i-ya"
+res,f="",""
+for i in s:
+    if i.isalpha():
+        res+=i
+    else:
+        f+=i
+print(f+res)
 
 
+# 3.I/p:abcadbc
+# o/p:abbcccaddddbbccc
 
 
+s="abcadbc"
+res=""
+for i in s:
+    r=ord(i)-ord('a')+1
+    res+=i*r
+print(res)
 
+# 4.i/p:     san:dhiy:at
+# o/p:       tay:ihdn:as
 
-
-
+s="san:dhiy:at"
+r=s.replace(":","")
+r=r[::-1]
+res=""
+j=0
+for i in range(len(s)):
+    if s[i].isalpha():
+        res+=r[j]
+        j+=1
+    else:
+        res+=":"
+print(res)
 
 
 
