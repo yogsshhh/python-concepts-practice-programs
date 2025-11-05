@@ -236,10 +236,27 @@ for i in range(len(s)):
         res+=":"
 print(res)
 
+# missing palindrome letter
 
+s="malayaam"
+d={}
+for i in s:
+    d[i]=d.get(i,0)+1
+r=len(s)+1//2
+for i ,j in d.items():
+    if j%2!=0:
+        print(i)
+        break
+MINIMUM DISTNCE BETWEEN STRINGS 
 
-
-
+words = ["the", "quick", "brown", "fox", "quick"]
+word1 = "the"
+word2 = "fox"
+r=words.index("the")
+s=words.index("fox")
+if r==0:
+    r+=1
+print(abs(r-s))
 
 
 
