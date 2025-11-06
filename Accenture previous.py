@@ -318,9 +318,23 @@ for i in range (1,n+1):
         print(j,end="")
     print()
 
+head and tails continue 3 head break h+=2 t-=1
 
+s = "HTHHTTHTHHHT"
+c = 1
+r = 0
 
+for i in s:
+    if i == "H":
+        r += 1
+        if r == 3:   # stop right when 3rd H happens
+            break
+        c += 2
+    else:
+        c -= 1
+        r = 0
 
+print(c)
 
 
 
