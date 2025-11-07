@@ -241,6 +241,18 @@ res.sort()
 print("".join(res))
 
 
+missing number
+
+arr = [1,6,5,2,3,8,9]
+arr = sorted(arr)
+
+res = []
+for i in range(1, len(arr)):
+    if arr[i] - arr[i-1] > 1:
+        for x in range(arr[i-1] + 1, arr[i]):
+            res.append(x)
+
+print(res)
 
 
 
