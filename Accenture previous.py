@@ -337,6 +337,29 @@ for i in s:
 print(c)
 
 
+def transform_string(S):
+    # Step 1: Replace groups of repeated chars with '#'
+    temp = ""
+    i = 0
+    while i < len(S):
+        j = i
+        while j < len(S) and S[j] == S[i]:
+            j += 1
+
+        if j - i >= 2:
+            temp += "#"
+        else:
+            temp += S[i]
+
+        i = j
+
+    # Step 2: Remove duplicate '#'
+    ans = ""
+    for ch in temp:
+        if not(ans and ans[-1] == "#" and ch == "#"):
+            ans += ch
+
+    return ans
 
 
 
