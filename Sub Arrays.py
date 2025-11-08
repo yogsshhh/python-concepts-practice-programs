@@ -155,6 +155,27 @@ for right in range(len(arr)):
 print(count)
 
 
+# Longest increasing subarray
+# Input: [2,3,4,1,2,3,4,5]
+# Output: [1,2,3,4,5]
+arr = [2,3,4,1,2,3,4,5]
+
+best = [arr[0]]
+curr = [arr[0]]
+
+for i in range(1, len(arr)):
+    if arr[i] > arr[i-1]:
+        curr.append(arr[i])
+    else:
+        if len(curr) > len(best):
+            best = curr
+        curr = [arr[i]]
+
+# final check
+if len(curr) > len(best):
+    best = curr
+
+print(best)
 
 
 
