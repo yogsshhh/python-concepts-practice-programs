@@ -86,7 +86,23 @@ arr.sort()
 	    return False
 	        
 
+# 12. Longest consecutive subarray
+# Input: [2,3,4,7,8,9,10]
+# Output: Longest length=4 (subarray [7,8,9,10])
 
+
+arr=[2,3,4,7,8,9,10,11]
+res=[]
+c=1
+for i in range(len(arr)-1):
+    if arr[i]+1 ==arr[i+1]:
+        # res.append(i)
+        c+=1
+    else:
+        res.append(c)
+        c=1
+res.append(c)
+print(max(res))
 
 
 
