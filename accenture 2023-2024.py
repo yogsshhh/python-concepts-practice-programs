@@ -255,10 +255,27 @@ for i in range(1, len(arr)):
 print(res)
 
 
+# rotate k (left)
 
 
+arr = [1, 2, 3, 4, 5]
+k = 2
+op=[3, 4, 5, 1, 2]
 
+k = k % len(arr)
+res = arr[k:] + arr[:k]
+print(k)
+print(res)
 
+# right
+arr = [1, 2, 3, 4, 5]
+k = 2
+op=[3, 4, 5, 1, 2]
+
+k = k % len(arr)
+res = arr[-k:] + arr[:-k]
+print(k)
+print(res)
 
 
 
