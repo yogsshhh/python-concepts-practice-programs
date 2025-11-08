@@ -27,3 +27,32 @@ for i in arr[1:]:
     min_prod=min(i,max_prod)
     
     ans=max(max_prod,ans)
+
+
+# kadne's algorithm minimum sum of subarray
+arr = [-2,1,-3,4,-1,2,1,-5,4]
+
+mini=ans=arr[0]
+
+for x in arr[1:]:
+    
+    mini=min(x,mini+x)
+    ans=min(mini,ans)
+print(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
