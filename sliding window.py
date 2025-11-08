@@ -43,10 +43,44 @@ class Solution:
 
 
 
-3.Longest Substring with At Most K Distinct Characters
+# Count subarrays with product < K
+# Input: [10,5,2,6], K=100
+# Output: 8
+
+arr=[10,5,2,6]
+k=100
+prod=1
+left=0
+count=0
+for right in range(len(arr)):
+    prod*=arr[right]
+    
+    
+    while prod >=k and left <right:
+        prod//= arr[left]
+        left+=1
+        
+    count+=(right-left+1)
+print(count)
 
 
+# Maximum product subarray
+# Input: [2,3,−2,4]
+arr=[2,3,-2,4]   
 
+max_prod=arr[0]
+min_prod=arr[0]
+ans=arr[0]
+
+
+for i in arr[1:]:
+    if i<0:
+        max_prod,min_prod=min_prod,max_prod
+        
+    max_prod=max(i,max_prod*i)
+    min_prod=min(i,max_prod)
+    
+    ans=max(max_prod,ans)
 
 
 
