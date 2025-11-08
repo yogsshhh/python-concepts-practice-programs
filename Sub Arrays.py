@@ -115,10 +115,44 @@ for i in range(len(arr)):
         print(arr[i:j+1])
         
 
+# Longest subarray with distinct elements
+# Input: [1,2,1,3,4]
+# Output: [2,1,3,4]
+maxs=0
+arr=[1,2,1,3,4]
+best=[]
+for i in range(len(arr)):
+    seen=set()
+    for j in range(i,len(arr)):
+        if arr[j] in seen:
+            break
+        seen.add(arr[j])
+        if len(seen)>maxs:
+            maxs=len(seen)
+            best=arr[i:j+1]
+        
+print(best)
 
 
+# Count subarrays with product < K
+# Input: [10,5,2,6], K=100
+# Output: 8
 
-
+arr=[10,5,2,6]
+k=100
+prod=1
+left=0
+count=0
+for right in range(len(arr)):
+    prod*=arr[right]
+    
+    
+    while prod >=k and left <right:
+        prod//= arr[left]
+        left+=1
+        
+    count+=(right-left+1)
+print(count)
 
 
 
