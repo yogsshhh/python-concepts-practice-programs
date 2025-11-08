@@ -105,7 +105,15 @@ res.append(c)
 print(max(res))
 
 
+# Print all subarrays
+# Input: [1,2]
+# Output: [1], [1,2], [2]
 
+arr=[1,2]
+for i in range(len(arr)):
+    for j  in range(i,len(arr)):
+        print(arr[i:j+1])
+        
 
 
 
