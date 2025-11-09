@@ -91,7 +91,14 @@ for i in s:
     res+=chr(ord("A")+length-1)
 print(res)
 
-
+s="abac"
+d={}
+for i in s:
+    val= ord(i)-ord('a')+1
+    
+    d[val]=d.get(val,0)+1
+sums=sum(i for i ,j in d.items() if j==1)
+print(sums)
 
 
 
