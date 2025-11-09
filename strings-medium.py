@@ -108,7 +108,13 @@ for i in range(1,len(s)):
         res+=s[i-1]
 res+=s[-1]
 print(res)
-
+----------------------------------
+s="ajiiikalamaass"
+res=s[0]
+for i in range(1,len(s)):
+    if res[-1]!=s[i]:
+        res+=s[i]
+print(res) 
 
 # 1. Replace Characters in a String
 # Input:
